@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+ 
+    <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+ 
+ 
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ 
+  <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+ 
+    <style>
+      /* navbar */
+    .navbar-nav .nav-link{
+    color: white;
+    transition: 0.3s;
+    position: relative;
+    }
+ 
+ 
+    .navbar-nav .nav-link:hover{
+    color: #c5a059;
+    }
+ 
+ 
+   .navbar-nav .nav-link.active{
+    color: #c5a059 !important;
+    }
+ 
+    .dropdown-item{
+        transition: 0.3s;
+        color: #c5a059;
+    }
+    .dropdown-item:hover{
+        background-color: #c5a059;
+        color: white;
+    }
+      /* section 1 */
+       .inria-serif-regular {
+            font-family: "Inria Serif", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .hero_container{
+            height: 430px;
+            background: linear-gradient(rgba(23, 14, 0, 0.65), rgba(19, 12, 0, 0.65)), url("images/learn\ page\ secton\ 1bg.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            overflow: visible;
+            position: relative;
+        }
+ 
+        .hero_text{
+            padding: 12px;
+            text-align: left;
+            position: absolute;
+            left: 2%;
+            bottom: 40px;
+            width: 55%;
+            font-size: 15px;
+        }
+             
+        .inria-serif-light-italic {
+            font-family: "Inria Serif", serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+ 
+        .learn_card{
+            background-color: rgb(245, 239, 232);
+            padding: 70px 60px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-top: 90px;
+            position: relative;
+            z-index: 5;
+            width: 100%;
+        }
+ 
+        .learn_image{
+            height: 500px;
+            width: 100%;
+            max-width: 460px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+ 
+        .learn_card h2 {
+            font-size: 2.4rem;
+        }
+ 
+        .learn_card p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+ 
+        .container_waste{
+            max-width: 1400px;
+        }
+ 
+        @media screen and (max-width: 991px) {
+            .learn_card {
+                padding: 50px 40px;
+            }
+            .learn_image {
+                margin-top: 30px;
+                max-width: 380px;
+            }
+        }
+ 
+        @media screen and (max-width: 768px) {
+            .learn_card {
+                padding: 35px 25px;
+                margin-top: -50px;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            .learn_image {
+                margin-top: 24px;
+                max-width: 100%;
+            }
+            .learn_card h2 {
+                font-size: 1.8rem;
+            }
+            .learn_card p {
+                font-size: 1rem;
+            }
+        }
+ 
+    /* Section 3 */
+    .three-r-section{
+      background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("images/3rsection4.png");
+      background-size: cover;
+      background-position: center;
+      padding: 80px 0;
+      margin-top: 130px;
+    }
+ 
+    .section-title{
+      font-family: 'inria serif', serif;
+      font-size: 3rem;
+      font-weight: 600;
+      color: white;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+ 
+    .section-title span{
+      color: #d4a24c;
+    }
+ 
+    .card-3r{
+      border: none;
+      border-radius: 15px;
+      overflow:hidden;
+      transition: 0.3s ease;
+      height: 100%;
+    }
+ 
+    .card-3r:hover{
+      transform: translateY(-8px);
+    }
+ 
+    .card-3r img{
+      height: 220px;
+      object-fit: cover;
+    }
+ 
+    .card-body{
+      padding: 28px;
+      text-align: center;
+    }
+ 
+    .card-title{
+      font-family: 'inria serif', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      color: #222;
+    }
+ 
+    .card-text{
+      color: #666;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+ 
+    @media (max-width: 992px){
+      .section-title{
+        font-size: 2.3rem;
+      }
+    }
+ 
+    @media (max-width: 768px){
+      .section-title{
+        font-size: 2rem;
+      }
+    }
+    /* section 4 */
+        .waste-section {
+      padding: 80px 0;
+    }
+ 
+    .waste-image {
+      border-radius: 20px;
+      overflow: hidden;
+      height: 100%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+ 
+    .waste-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+ 
+    .section-title {
+      font-family: 'Inria Serif', serif;
+      font-size: 3rem;
+      color: #4a3f39;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+ 
+    .section-text {
+      font-size: 15px;
+      line-height: 1.9;
+      color: #777;
+      margin-bottom: 20px;
+    }
+ 
+    .waste-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+ 
+    .icon-box {
+      min-width: 55px;
+      height: 55px;
+      border-radius: 14px;
+      background: rgba(139, 195, 74, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+ 
+    .icon-box i {
+      font-size: 1.8rem;
+      color: #8bc34a;
+    }
+ 
+    .waste-card h5 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #5b514b;
+      margin-bottom: 8px;
+    }
+ 
+    .waste-card p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #7b7b7b;
+      margin: 0;
+    }
+ 
+    @media (max-width: 991px) {
+      .section-title {
+        font-size: 2.3rem;
+        margin-top: 35px;
+      }
+    }
+ 
+    /* Section 5 */
+    .effects-section{
+      padding:100px 0;
+    }
+ 
+    .small-text{
+      font-size:14px;
+      color:#464529;
+      margin-bottom:10px;
+    }
+ 
+    .main-title{
+      font-family:'Inria Serif', serif;
+      font-size:72px;
+      font-weight:600;
+      line-height:0.9;
+      color:oklch(44.718% 0.08162 90.097);
+      margin-bottom:25px;
+    }
+ 
+    .main-title span{
+      color:#c5a059;
+      font-style:italic;
+      display:block;
+    }
+ 
+    .description{
+      color:#555;
+      font-size:15px;
+      line-height:1.8;
+      max-width:520px;
+    }
+ 
+ 
+    .custom-accordion .accordion-item{
+      border:2px solid #6d633d;
+      border-radius:10px !important;
+      overflow:hidden;
+      margin-bottom:20px;
+      background:transparent;
+    }
+ 
+    .custom-accordion .accordion-button{
+      background:transparent;
+      font-size:20px;
+      font-weight:600;
+      color:#4d4735;
+      padding:22px 25px;
+      box-shadow:none;
+      position:relative;
+    }
+ 
+    .custom-accordion .accordion-button:not(.collapsed){
+      background:transparent;
+      color:#4d4735;
+      box-shadow:none;
+    }
+ 
+   
+    .custom-accordion .accordion-button::after{
+      display:none;
+    }
+ 
+   
+    .accordion-icon{
+      width:40px;
+      height:40px;
+      background:#c89a3d;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-left:auto;
+      flex-shrink:0;
+    }
+ 
+    .accordion-icon i{
+      font-size:20px;
+      color:#2f2a1f;
+      transition:0.3s;
+    }
+ 
+    .accordion-button:not(.collapsed) .accordion-icon i{
+      transform:rotate(180deg);
+    }
+ 
+    .accordion-body{
+      color:#555;
+      line-height:1.8;
+      font-size:15px;
+      padding:0 25px 25px;
+    }
+ 
+    @media(max-width:991px){
+ 
+      .main-title{
+        font-size:55px;
+      }
+ 
+      .left-content{
+        margin-bottom:50px;
+      }
+    }
+ 
+    @media(max-width:768px){
+ 
+      .main-title{
+        font-size:42px;
+      }
+ 
+      .custom-accordion .accordion-button{
+        font-size:18px;
+      }
+    }
+ 
+    /* footer */
+      .inria-serif-light {
+            font-family: "Inria Serif", serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+ 
+        .inria-serif-regular {
+            font-family: "Inria Serif", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+ 
+        .inria-serif-bold {
+            font-family: "Inria Serif", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+ 
+        .inria-serif-light-italic {
+            font-family: "Inria Serif", serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+ 
+        .inria-serif-regular-italic {
+            font-family: "Inria Serif", serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+ 
+        .inria-serif-bold-italic {
+            font-family: "Inria Serif", serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+ 
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+ 
+        @media screen and (max-width:768px){
+            .footer_session{
+                margin-top: 25px;
+            }
+ 
+            .hero_container{
+                margin-bottom: 75px;
+            }
+        }
+
+ 
+  </style>
+</head>
+<body style="font-family: 'Inria Serif', serif; background-color:white" id="Learn">
+  <!-- section 1 -->
+      <div class="container-fluid d-flex flex-column text-white hero_container">
+        <!-- Responsive Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark pt-3" style="padding-top: 20px;">
+        <div class="container-fluid px-4 px-lg-5">
+           
+            <a href="#" class="navbar-brand fw-bold fs-2">
+                <img src="images/logo.png" alt="logo" style="width: auto; height: clamp(55px, 8vw, 100px);">
+            </a>
+           
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+ 
+           
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto" style="gap: 8px;">
+                    <li class="nav-item"><a class="nav-link px-lg-3" href="combininghomecode.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 active" href="combininglearncode.html">Learn</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3" href="combiningaboutuscode.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3" href="combiningcontactuscode.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3" href="combiningsolutioncode.html">Solutions</a></li>
+                </ul>
+ 
+                <div class="d-flex align-items-center justify-content-center mt-3 mt-lg-0">
+                 
+                    <input class="form-control rounded-pill border-0 me-3 d-none d-lg-block" type="text" placeholder="Search" style="width: min(260px, 90vw); height: 36px; background:white">
+                   
+                    <div class="dropdown">
+                        <a href="#" class="text-white text-decoration-none" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle fs-1"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end p-3 border-0 shadow rounded-4" style="width: 260px;">
+                            <li><a class="dropdown-item rounded-3 py-3 d-flex align-items-center gap-3" href="#"><i class="bi bi-person"></i> Profile</a></li>
+                            <li><a class="dropdown-item rounded-3 py-3 d-flex align-items-center gap-3" href="#"><i class="bi bi-chat"></i> Community</a></li>
+                            <li><a class="dropdown-item rounded-3 py-3 d-flex align-items-center gap-3" href="#"><i class="bi bi-gear"></i> Settings</a></li>
+                            <li><a class="dropdown-item rounded-3 py-3 d-flex align-items-center gap-3" href="#"><i class="bi bi-info-circle"></i> Help Center</a></li>
+                            <li><a class="dropdown-item rounded-3 py-3 d-flex align-items-center gap-3" href="#"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+        <div class="hero_text">
+            <h1 class="display-4 display-4 mb-3 inria-serif-regular">Understanding <br class="d-md-none"><span style="color:#c5a059;">Waste Management</span></h1>
+            <p class="inria-serif-regular">Learn the fundamental concepts of waste management, including its importance, types of waste, and the environmental impacts of improper disposal. This page provides essential knowledge needed to better understand waste-related issues.</p>
+        </div>
+    </div>
+
+    <div class="container container_waste">
+      <div class="learn_card" data-aos="fade-up" data-aos-duration="800">
+        <div class="row align-items-center g-5">
+ 
+          <div class="col-lg-7">
+            <h2 class="mb-4 inria-serif-regular"> What is<span class="inria-serif-light-italic" style="color: #c5a059;"> waste management? </span></h2>
+           
+            <p class="fw-bold mb-2" style="color: #c5a059;">Definition</p>
+ 
+            <p class="mb-4"> Waste management is the process of collecting, sorting, transporting, recycling, treating, and disposing of waste in a safe and efficient way. It also includes monitoring waste to reduce pollution and protect the environment and public health.</p>
+           
+            <p class="fw-bold mb-2" style="color: #c5a059;">Importance of Proper Waste Disposal</p>
+ 
+            <p>Proper waste disposal helps reduce environmental pollution, prevent health risks, conserve natural resources, and decrease the amount of waste sent to landfills. It also supports recycling and sustainable practices, creating cleaner and healthier communities for the future.</p>
+ 
+          </div>
+ 
+          <div class="col-lg-5 text-center">
+            <img src="images/Learn page section 1 square.png" alt="Workers managing waste" class="learn_image img-fluid">
+          </div>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- section 2 -->
+       <section class="waste-section">
+  <div class="container">
+ 
+    <div class="row align-items-center g-5">
+ 
+      <!-- left -->
+      <div class="col-lg-4">
+        <div class="waste-image">
+          <img
+            src="images/image.png"
+            alt="Waste Image"
+          />
+        </div>
+      </div>
+ 
+      <!-- right -->
+      <div class="col-lg-8">
+ 
+        <h1 class="section-title2">Types of Waste</h1>
+ 
+        <p class="section-text">
+          Waste is piling up around us every day—from our homes, schools,
+          and cities—and it continues to grow as populations and consumption
+          increase. This rising volume of waste puts pressure on the environment
+          and makes proper management more important than ever.
+        </p>
+ 
+        <p class="section-text">
+          However, not all waste is the same. Different types of waste behave
+          differently and require specific methods of handling and disposal.
+          In general, waste can be divided into four main categories:
+          biodegradable, non-biodegradable, recyclable, and hazardous.
+        </p>
+ 
+        <!-- Waste Types -->
+        <div class="row mt-5">
+ 
+          <div class="col-md-6">
+            <div class="waste-card">
+ 
+              <div class="icon-box">
+                <i class="bi bi-tree-fill"></i>
+              </div>
+ 
+              <div>
+                <h5>Biodegradable Waste</h5>
+                <p>
+                  Organic materials such as food scraps and leaves that
+                  decompose naturally and can be composted.
+                </p>
+              </div>
+ 
+            </div>
+          </div>
+ 
+          <div class="col-md-6">
+            <div class="waste-card">
+ 
+              <div class="icon-box">
+                <i class="bi bi-cup-straw"></i>
+              </div>
+ 
+              <div>
+                <h5>Non-biodegradable Waste</h5>
+                <p>
+                  Materials like plastics and metals that do not break down
+                  easily and can remain in the environment for a long time.
+                </p>
+              </div>
+ 
+            </div>
+          </div>
+ 
+          <div class="col-md-6">
+            <div class="waste-card">
+ 
+              <div class="icon-box">
+                 <i class="bi bi-recycle"></i>
+              </div>
+ 
+              <div>
+                <h5>Recyclable Waste</h5>
+                <p>
+                  Items such as paper, glass, and plastic that can be
+                  processed and turned into new products.
+                </p>
+              </div>
+ 
+            </div>
+          </div>
+ 
+          <div class="col-md-6">
+            <div class="waste-card">
+ 
+              <div class="icon-box">
+                <i class="bi bi-battery-charging"></i>
+              </div>
+ 
+              <div>
+                <h5>Hazardous Waste</h5>
+                <p>
+                  Dangerous materials like batteries and chemicals that
+                  require special handling to prevent harm.
+                </p>
+              </div>
+ 
+            </div>
+          </div>
+ 
+        </div>
+ 
+      </div>
+    </div>
+  </div>
+</section>
+    
+    <!-- Section 3 -->
+     <section class="three-r-section">
+    <div class="container">
+ 
+      <h1 class="section-title" style="color: white;">
+        Embrace The <span>3rs</span> for a Cleaner Planet
+      </h1>
+ 
+      <div class="row g-4">
+ 
+        <!-- Reduce -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card card-3r shadow-lg">
+            <img src="images/3rssection1.png" class="card-img-top" alt="Reduce">
+ 
+             <div class="card-body">
+              <h3 class="card-title">Reduce</h3>
+ 
+              <p class="card-text">Reducing means using fewer materials and avoiding unnecessary waste in daily life. Simple actions such as limiting single-use plastics, buying only what is needed, and choosing reusable products can help reduce pollution and conserve natural resources.</p>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Reuse -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card card-3r shadow-lg">
+            <img src="images/3rsection2.png" class="card-img-top" alt="Reuse">
+ 
+            <div class="card-body">
+              <h3 class="card-title">Reuse</h3>
+ 
+              <p class="card-text">Reusing means using items again instead of throwing them away after one use. Reusable bags, bottles, containers, and donated items help reduce waste while saving materials and energy needed to produce new products.</p>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Recycle -->
+        <div class="col-lg-4 col-md-6 mx-md-auto">
+          <div class="card card-3r shadow-lg">
+            <img src="images/3rsection3.png" class="card-img-top" alt="Recycle" >
+ 
+            <div class="card-body">
+              <h3 class="card-title">Recycle</h3>
+ 
+              <p class="card-text">Recycling is the process of collecting and turning waste materials such as paper, plastic, glass, and metal into new products. Recycling helps reduce landfill waste, conserve resources, save energy, and protect the environment.
+              </p>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+     </section>
+
+     <!-- section 4 -->
+    <section class="effects-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 left-content">
+ 
+                <p class="small-text">How mismanaged waste impacts our environment and health</p>
+               
+                <h1 class="main-title">Effect on poor <span>Waste Management</span></h1>
+               
+                <p class="description">Poor waste management can lead to serious environmental and health problems, affecting both natural ecosystems and human communities. When waste is not handled properly, it can pollute the air, water, and land, creating long-term damage.</p>
+            </div>
+           
+            <div class="col-lg-6">
+                <div class="accordion custom-accordion" id="wasteAccordion">
+                   
+                    <!-- Item 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">Pollution
+                                <div class="accordion-icon"><i class="bi bi-chevron-down"></i></div>
+                            </button>
+                        </h2>
+                       
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#wasteAccordion">
+                            <div class="accordion-body">Improper waste disposal pollutes rivers, soil, and the atmosphere,harming both people and the environment.</div>
+                        </div>
+                    </div>
+                   
+                    <!-- Item 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Health Problems
+                                <div class="accordion-icon"><i class="bi bi-chevron-down"></i>
+                                </div>
+                            </button>
+                        </h2>
+                       
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#wasteAccordion">
+                             <div class="accordion-body">Waste buildup can spread bacteria and diseases,causing serious health risks in communities.
+                             </div>
+                        </div>
+                    </div>
+                   
+                    <!-- Item 3 -->
+                     <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"> Climate Change
+ 
+                <div class="accordion-icon">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+ 
+              </button>
+ 
+            </h2>
+ 
+            <div id="collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#wasteAccordion">
+ 
+              <div class="accordion-body">
+                Decomposing waste releases greenhouse gases like methane,
+                contributing to global warming and climate change.
+              </div>
+ 
+            </div>
+ 
+          </div>
+ 
+          <!-- Item 4 -->
+          <div class="accordion-item">
+ 
+            <h2 class="accordion-header">
+ 
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"> Harm to Animals and Marine Life
+ 
+                <div class="accordion-icon">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+ 
+              </button>
+ 
+            </h2>
+ 
+            <div id="collapseFour"
+              class="accordion-collapse collapse"
+              data-bs-parent="#wasteAccordion">
+ 
+              <div class="accordion-body">Plastic and toxic waste can injure or kill animals,especially marine life in oceans and rivers.
+              </div>
+ 
+            </div>
+ 
+          </div>
+ 
+        </div>
+ 
+      </div>
+ 
+    </div>
+ 
+  </div>
+ 
+    </section>
+
+    <!-- Footer -->
+    <div class="container-fluid bg-black text-white px-5 py-3">
+ 
+        <div class="row">
+ 
+            <!-- Left Side -->
+            <div class="col-md-4">
+ 
+                <h1>Zephra</h1>
+ 
+                <p class="inria-serif-regular">
+                    Smart waste management solutions for sustainable cities.
+                    Turning waste problems into opportunities through technology
+                    and community action.
+                </p>
+ 
+                <p class="inria-serif-regular">
+                    <i class="bi bi-geo-alt-fill px-1"></i>
+                    123 Green Street, Eco City 45678
+                </p>
+ 
+                <p class="inria-serif-regular">
+                    <i class="bi bi-telephone-fill px-1"></i>
+                    +1 (555) 123-4567
+                </p>
+ 
+                <p class="inria-serif-regular">
+                    <i class="bi bi-envelope px-1"></i>
+                    zephra-waste_management.com
+                </p>
+ 
+            </div>
+ 
+            <!-- Quick Links -->
+            <div class="col-md-2 footer_session">
+ 
+                <h5 class="text-warning inria-serif-regular">Quick Links</h5>
+ 
+                <a href="combininghomecode.html"><p class="inria-serif-regular">Home</p></a>
+                <a href="#Learn"><p class="inria-serif-regular">Learn</p></a>
+                <a href="#About"><p class="inria-serif-regular">About us</p></a>
+                <a href="#Contact"><p class="inria-serif-regular">Contact us</p></a>
+                <a href="combiningsolutioncode.html"><p class="inria-serif-regular">Solutions</p></a>
+ 
+            </div>
+ 
+            <!-- Resources -->
+            <div class="col-md-3 footer_session">
+ 
+                <h5 class="text-warning inria-serif-regular">Resources</h5>
+ 
+                <a href="#"><p class="inria-serif-regular">Waste Segregation</p></a>
+                <a href="#"><p class="inria-serif-regular">Recycling Programs</p></a>
+                <a href="#"><p class="inria-serif-regular">Composting</p></a>
+                <a href="#"><p class="inria-serif-regular">Reduce Plastic</p></a>
+                <a href="#"><p class="inria-serif-regular">Clean-up Campaigns</p></a>
+ 
+            </div>
+ 
+            <!-- Support -->
+            <div class="col-md-3 footer_session">
+ 
+                <h5 class="text-warning inria-serif-regular">Support</h5>
+ 
+                <a href="#"><p class="inria-serif-regular">Help Center</p></a>
+                <a href="#"><p class="inria-serif-regular">Contact Support</p></a>
+                <a href="#FAQ"><p class="inria-serif-regular">FAQ</p></a>
+ 
+                <a href="https://www.facebook.com/"><i class="bi bi-facebook fs-3 me-3"></i></a>
+                <a href="https://web.telegram.org/"><i class="bi bi-telegram fs-3 me-3"></i></a>
+                <a href="https://www.instagram.com/"><i class="bi bi-instagram fs-3"></i></a>
+ 
+            </div>
+ 
+        </div>
+ 
+        <hr>
+ 
+        <!-- Bottom Footer -->
+        <div class="row">
+ 
+            <div class="col-md-6">
+                <p class="inria-serif-regular">© 2026 Waste Management Project</p>
+            </div>
+ 
+            <div class="col-md-6 text-md-end">
+ 
+                <a href="#"><span class="me-3 inria-serif-regular">Privacy Policy</span></a>
+                <a href="#"><span class="me-3 inria-serif-regular">Terms of Service</span></a>
+                <a href="#"><span class="inria-serif-regular">Cookie Policy</span></a>
+ 
+            </div>
+ 
+        </div>
+ 
+    </div>
+ 
+    <!-- AOS Animation JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({  });
+  </script>
+</body>
+</html>
